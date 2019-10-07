@@ -1,0 +1,18 @@
+/* You can add global styles to this file, and also import other style files */
+/* <script src="https://kit.fontawesome.com/a076d05399.js"></script> */
+ 
+body {
+    padding-top:60px;
+}
+
+.pageheight {
+    min-height:495px;
+}
+
+.footer {
+    background: darkblue;
+    color: white;
+    min-height: 150px;
+    margin-top: 15px;
+    padding-top: 15px;
+}

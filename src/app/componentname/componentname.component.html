@@ -1,0 +1,88 @@
+
+    <div class="row">
+
+        <div class="col-md-5 col-lg-6">
+          <div class="panel panel-primary" >
+            <div class="panel-heading text-center">
+              Ankit Gupta
+            </div>
+            <div class="panel-body">
+              <table class="table table-bordered"  *ngFor = "let row of allcar; let i=index;">
+                <caption> {{ row.name }} </caption>
+                <tr  *ngFor = "let rowdata of row.policies; let i2=index">
+                    <td (click)="getdata(i, i2,rowdata.type)">{{rowdata.type}}</td>
+                    <td>{{rowdata.number}}</td>
+                    <td> {{ rowdata.logo }} </td>
+                    <td> {{ rowdata.icon }} </td>
+                </tr>
+              </table>
+            </div>
+          </div>   
+        </div>
+        <div class="col-md-6">
+          <h2> Motor </h2>
+          <h4> Summary of Cover </h4>
+          <div class="panel panel-primary">
+              <div class="panel-heading text-center">
+                Ankit Gupta
+              </div>
+              <div class="panel-body">
+                <table class="table table-bordered">
+                  <tr>
+                    <th> Type </th>
+                    <th> 	Name </th>
+                    <th> Value </th>
+                    <th> Basic Excess </th>
+                    <th>	Premium </th>
+                  </tr>
+                  <tr>
+                    <td> {{ showdata.type }} </td>
+                    <td> {{ showdata.name }} </td>
+                    <td> {{ showdata.value }} </td>
+                    <td> {{ showdata.basicExcess }} </td>
+                    <td> {{ showdata.premium }} </td>
+                  </tr>
+                  <tr>
+                      <td>Total Vehicle SASRIA</td>
+                      <td> </td>
+                      <td> </td>
+                      <td> </td>
+                      <!-- <td> {{ showdata.brokeragePercentage }} </td> -->
+                  </tr>
+                  <tr>
+                      <td>Broker Fee </td>
+                      <td> </td>
+                      <td> </td>
+                      <td> </td>
+                      <td> {{ showdata.brokeragePercentage }} </td>
+                  </tr>
+                  <tr>
+                      <td> Total Monthly Payment </td>
+                      <td> </td>
+                      <td> </td>
+                      <td> </td>
+                      <td> {{ showdata.brokeragePercentage }} </td>
+                  </tr>
+                </table>
+                <table class="table table-bordered" *ngIf = "Motorr">
+                    <tr>
+                      <th> Section </th>
+                      <th> 	Insured Item </th>
+                      <th> Value </th>
+                      <th> Basic Excess </th>
+                      <th>	Premium </th>
+                    </tr>
+                    <tr *ngFor = "let d of Motor">
+                      <td> {{ d.name }} </td>
+                      <td> {{ d.id }} </td>
+                      <td> {{ d.icon }} </td>
+                      <td> {{ d.icon2 }} </td>
+                      <td> {{ d.icon3 }} </td>
+                      <td> {{ d.icon4 }} </td>
+                      <td> {{ d.premium }} </td>
+                    </tr>
+                  </table>
+              </div>
+            </div>
+        </div>
+      </div>

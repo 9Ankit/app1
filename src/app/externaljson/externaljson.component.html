@@ -1,0 +1,54 @@
+<div class="row">
+  <div class="col-md-8">
+    <h1 class="text-center"> Total Number of Cars {{ total }} </h1>  
+  </div> 
+    <!-- this total will only run in firefox bcoz we have to add an extension called 'cors everywhere' which runs only in firefox 
+    url called in ts file-->
+  
+  <div class="col-md-4">
+    <label> Search.. </label>
+    <input type="text" class="form-control" [(ngModel)] = "keyword">
+  </div>
+</div> 
+<br><br>
+
+<div class="row" *ngFor = "let car of allcar | filter:keyword">
+  <div class="col-md-4 form-group">
+    <div class="panel panel-primary">
+      
+        <div class="panel-heading text-center">
+            Model : {{car.model}}
+            
+        </div>
+        <div class="panel-body"> 
+            <img src="http://cybotrix.com/ios/img/{{car.image}}" style=" height: 120px; width: 100%;">
+        </div>
+
+      
+    </div> 
+  </div> <!--4 end-->
+  
+  <div class="col-md-3">
+      <p>Fuel Type : {{car.name}}</p>
+      <p>Version : {{car.id}} </p>
+      <p>Price : {{car.price}} </p>  
+      <p>Mileage : {{car.mileage}} </p>  
+      <p> Category : {{car.category.vechicleType}} </p> 
+      <p> Service Done: {{car.status.isServiceDone}} </p>
+      <p> Boot Size: {{car.bootSize}} </p>
+ </div>
+
+  <div class="col-md-5">
+      <table class="table table-bordered">
+          <caption><strong>Car Service History ---  <u><b class="text-warning">{{car.serviceHistory.length}} Times</b></u> </strong></caption>
+          <tr class="bg-success">
+            <th class="text-center">Service Cost</th>
+            <th class="text-center">Service Date</th>
+          </tr>
+          <tr *ngFor = "let service of car.serviceHistory"> 
+             <td class="text-center"> {{service.serviceCost}} </td>
+             <td class="text-center"> {{service.serviceDate}} </td>
+          </tr>
+        </table>
+  </div>
+</div>

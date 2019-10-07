@@ -1,0 +1,23 @@
+<table class="table table-bordered"> 
+  <caption class="text-center"> <h3>Array 2 Example</h3> </caption>
+  <tr>
+    <th>Full Name</th>
+    <th>Mobile No</th>
+    <th>City</th>
+    <th>Action</th>
+  </tr>
+
+  <tr>
+    <td> <input type="text" #name class="form-comtrol input-sm"></td>
+    <td> <input type="text" #mobile class="form-comtrol input-sm"></td>
+    <td> <input type="text" #city class="form-comtrol input-sm"></td>
+    <td> <button class="btn btn-primary btn-sm" (click)="save(name.value, mobile.value, city.value)">Save</button></td>
+  </tr>
+
+  <tr *ngFor="let row of user; let i=index"> 
+     <td>{{row.name}}</td>
+     <td>{{row.mobile}}</td>
+     <td>{{row.city}}</td>
+     <td> <button (click)="deluser(i)">Delete</button> </td>
+  </tr>
+</table>

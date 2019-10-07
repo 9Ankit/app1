@@ -1,0 +1,31 @@
+<div class="row">
+  <div class="col-md-12">
+    <h1 align="center" >Total Number of Photos are : {{ total }}</h1>  
+    <button (click)="getphoto()" class="btn btn-primary btn-lg"> Read from JSON file </button>  
+  </div>
+</div>
+<br>
+
+<!-- 
+<div class="row">
+  <div class="col-md-3" *ngFor = "let row of allphoto">
+   <div class="panel panel-primary">
+     <div class="panel-heading"> {{ row.title }} </div>
+     <div class="panel-body">
+     <img src="../../assets/{{ row.url }}" class="img-responsive img-rounded">
+     </div>
+   </div>
+  </div>
+</div> -->    
+ 
+<!-- to read this part uncomment the line " // this.getphoto();"    in ts part -->
+
+
+          <!-- or     -->
+
+<div class="row">
+  <div class="col-md-3" *ngFor = "let row of allphoto">
+    <h4 class="bg-success text-center"> {{ row.title }} </h4>
+    <p><img src="../../assets/{{ row.url }}" class="img-responsive img-rounded"></p>
+  </div>
+</div>

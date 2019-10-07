@@ -1,0 +1,16 @@
+<br>
+<div class="row">
+    <div class="col-md-4">
+      <button (click)="getuser()" class="btn btn-primary"> Read from JSON file </button>  
+    </div>
+  <div class="col-md-8">
+    <h3>Reading Data Using Get Method</h3>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-md-3" *ngFor = "let row of alluser">
+    <p> Full Name : {{row.name}} </p>
+    <p> Mobile No : {{row.mobile}} </p>
+  </div>
+</div>

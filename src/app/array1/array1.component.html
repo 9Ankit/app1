@@ -1,0 +1,41 @@
+<div class="row">
+  <div class="col-md-4">
+    <table class="table table-borderd">
+    <caption><h2>Array 1 Example {{total}} </h2></caption>
+      <tr>
+        <th>Item Name</th>
+        <td> <input type="text" #name class="form-control"> </td>
+        <td> <button (click)="saveitem(name.value)" class="btn btn-primary">Save</button> </td>
+      </tr>
+    </table>
+
+    <h3 align="center">Item List</h3>
+      <table class="table table-borderd">
+        <tr *ngFor="let x of allitem; let i=index">
+          <td> {{x}} </td>
+          <td> <button (click)="deleteitem(i)" class="btn btn-danger"> Delete </button> </td>
+        </tr>
+      </table>
+</div> 
+<!-- col-4 end -->
+  <div class="col-md-8">
+    <app-array2></app-array2>
+  </div>
+  
+</div>  
+<!-- row end -->
+
+<div class="row">
+ <div class="col-md-6">
+  <p class="text-center"> {{msg}} </p> 
+  <label> Example for ngModal </label>
+   <input type="text" class="form-control" [(ngModel)] = "proname">
+   <div class="text-center">
+     <button class="btn btn-success" (click)="saveproduct()">Save Pro</button>
+   </div>
+ </div>
+ <div class="col-md-6">
+   <p *ngFor = "let pro of product"> {{pro}} </p>
+   
+ </div>
+</div>
