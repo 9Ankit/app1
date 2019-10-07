@@ -37,7 +37,7 @@ export class ComponentnameComponent implements OnInit {
       });
   }
 
-  showdata : any[];
+  showdata ;
   getdata(index:number, index2:number, type:string)
   {
      this.showdata = this.allcar.data[index].policies[index2].coverage;
