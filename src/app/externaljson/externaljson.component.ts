@@ -11,7 +11,7 @@ import { getCreationMode } from '@angular/core/src/render3/instructions';
 export class ExternaljsonComponent implements OnInit {
 
   constructor(private obj:HttpClient) { }
-
+keyword;
   ngOnInit() {
     this.getCar();     // to call the function on page load
   }

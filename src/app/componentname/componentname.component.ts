@@ -36,7 +36,7 @@ export class ComponentnameComponent implements OnInit {
         this.allcar = response as string[];
       });
   }
-
+  Motor;
   showdata ;
   getdata(index:number, index2:number, type:string)
   {
